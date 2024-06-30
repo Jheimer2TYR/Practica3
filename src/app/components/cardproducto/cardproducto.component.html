@@ -1,0 +1,28 @@
+<h1 >Nombre del producto: {{producto.nombre}}</h1>
+
+<hr>
+<div class="row">
+   <div class="col-md-4">
+    <img [src]='producto.img' class='img-fluid' [alt]='producto.nombre'>
+    <br><br>
+    <!-- <a routerLink="'/productos'" class="btn btn-outline-danger btn-block">Regresar</a> -->
+    <a href="/productos" class="btn btn-outline-danger btn-block">Regresar</a>
+
+   </div>
+   <div class="col-md-8">
+     <h1> {{producto.nombre}}</h1>
+      <hr>
+      <p>
+         Precio: {{producto.precio}}
+      </p>
+      <div>
+         <img *ngIf="producto.casa == 'Marvel' " class="img-logo"
+         src="assets/img/Marvel-logo.png" alt="DC" >
+         <img *ngIf="producto.casa == 'DC' " class="img-logo" 
+         src="assets/img/dc-logo.jpng" alt="Marvel" > 
+      </div>
+      
+      
+   </div>
+
+</div>

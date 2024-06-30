@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Example</title>
+  <style>
+    .navbar {
+      background-color: #000; /* Fondo negro */
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff; /* Color del texto */
+    }
+
+    .navbar-brand img {
+      margin-right: 10px; /* Ajustar según sea necesario */
+    }
+
+    .navbar-brand .store-name {
+      font-size: 24px; /* Ajustar según sea necesario */
+      font-weight: bold;
+    }
+
+    .nav-link, .form-inline input, .form-inline button {
+      color: #fff; /* Color del texto de los enlaces y los inputs */
+    }
+
+    .form-inline input::placeholder {
+      color: #ccc; /* Color del texto del placeholder */
+    }
+
+    .form-inline input, .form-inline button {
+      border-color: #fff; /* Color del borde de los inputs y el botón */
+    }
+
+    .form-inline button {
+      background-color: transparent; /* Fondo transparente del botón */
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedCont" aria-controls="navbarSupportedCont" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="#" class="navbar-brand">
+      <img src="img" width="100" height="100" alt="Nombre de la tienda">
+      <span class="store-name">En Forma y en Moda</span>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedCont">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" href="productos">Productos</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar producto"
+          (keyup.enter)="buscarProducto(buscarTexto.value)" #buscarTexto>
+        <button (click)="buscarProducto(buscarTexto.value)" class="btn btn-outline-primary my-2 my-sm-0"
+          type="button">Buscar</button>
+      </form>
+    </div>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
